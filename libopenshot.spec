@@ -1,15 +1,16 @@
 Name:           libopenshot
 Version:        0.1.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
 URL:            http://www.openshot.org/
-Source0:        https://launchpad.net/%{name}/0.1/%{version}/+download/%{name}-%{version}.tar.gz
+Source0:        https://launchpad.net/libopenshot/0.1/%{version}/+download/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake swig
 BuildRequires:  python3-devel
 BuildRequires:  ImageMagick-c++-devel
+BuildRequires:	ImageMagick-devel
 BuildRequires:  ffmpeg-devel
 BuildRequires:  libopenshot-audio-devel >= 0.1.1
 BuildRequires:  qt5-qttools-devel
@@ -51,7 +52,7 @@ applications that use %{name}.
 
 %build
 export CXXFLAGS="%{optflags} -Wl,--as-needed"
-%cmake .
+%cmake -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 .
 make %{?_smp_mflags}
 
 
@@ -77,6 +78,10 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Thu Jun 30 2016 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.1-3
+- Massive rebuild F25
+
 * Mon Apr 18 2016 Richard Shaw <hobbes1069@gmail.com> - 0.1.1-2
 - Rename python-libopenshot to python3-libopenshot.
 
