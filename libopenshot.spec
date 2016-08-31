@@ -1,11 +1,12 @@
 Name:           libopenshot
-Version:        0.1.1
-Release:        3%{?dist}
+Version:        0.1.2
+Release:        1%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
 URL:            http://www.openshot.org/
-Source0:        https://launchpad.net/libopenshot/0.1/%{version}/+download/%{name}-%{version}.tar.gz
+#Source0:        https://launchpad.net/libopenshot/0.1/%{version}/+download/%{name}-%{version}.tar.gz
+Source0:      	https://github.com/OpenShot/%{name}/archive/v%{version}.tar.gz
 
 BuildRequires:  cmake swig
 BuildRequires:  python3-devel
@@ -16,6 +17,15 @@ BuildRequires:  libopenshot-audio-devel >= 0.1.1
 BuildRequires:  qt5-qttools-devel
 BuildRequires:  qt5-qtmultimedia-devel
 BuildRequires:  unittest-cpp-devel
+BuildRequires:  libXinerama-devel
+BuildRequires:	libXcursor-devel
+BuildRequires:	alsa-lib-devel
+BuildRequires:	pulseaudio-libs-devel
+BuildRequires:	libXrandr-devel
+BuildRequires:	cppzmq-devel czmq-devel python3-zmq czmq
+
+
+
 
 
 %description
@@ -36,7 +46,8 @@ developing applications that use %{name}.
 
 %package -n     python3-%{name}
 Summary:        Python bindings for %{name}
-Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release} 
+Requires:	python3-zmq
 Group:          Development/Libraries
 Obsoletes:      python-%{name} < 0.1.1-2
 Provides:       python-%{name}
@@ -47,7 +58,7 @@ applications that use %{name}.
 
 
 %prep
-%setup -qc
+%setup -n %{name}-%{version}
 
 
 %build
@@ -78,6 +89,10 @@ make %{?_smp_mflags}
 
 
 %changelog
+* Wed Aug 31 2016 Pavlo Rudyi <paulcarroty at riseup.net> - 0.1.2-1
+- Update to 0.1.2
+- Change the source URL
+- New dependencys: https://docs.google.com/document/d/1V6nq-IuS9zxqO1-OSt8iTS_cw_HMCpsUNofHLYtUNjM/pub#h.1mu1kucmg351 
 
 * Thu Jun 30 2016 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.1-3
 - Massive rebuild F25
