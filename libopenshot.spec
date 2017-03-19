@@ -1,6 +1,6 @@
 Name:           libopenshot
 Version:        0.1.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -23,10 +23,6 @@ BuildRequires:	alsa-lib-devel
 BuildRequires:	pulseaudio-libs-devel
 BuildRequires:	libXrandr-devel
 BuildRequires:	cppzmq-devel czmq-devel python3-zmq czmq
-
-
-
-
 
 %description
 OpenShot Library (libopenshot) is an open-source project
@@ -89,6 +85,10 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Sat Mar 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.2-2
+- Rebuilt for libbluray
+
 * Wed Aug 31 2016 Pavlo Rudyi <paulcarroty at riseup.net> - 0.1.2-1
 - Update to 0.1.2
 - Change the source URL
