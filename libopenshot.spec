@@ -1,12 +1,16 @@
+%global gitdate 20170321
+%global commit0 46c25dc3ec5eb663f6d05dabf100c51841372eff
+%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
+%global gver .%{gitdate}git%{shortcommit0}
+
 Name:           libopenshot
-Version:        0.1.2
-Release:        2%{?dist}
+Version:        0.1.3
+Release: 	1%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
 URL:            http://www.openshot.org/
-#Source0:        https://launchpad.net/libopenshot/0.1/%{version}/+download/%{name}-%{version}.tar.gz
-Source0:      	https://github.com/OpenShot/%{name}/archive/v%{version}.tar.gz
+Source0:	https://github.com/OpenShot/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:  cmake swig
 BuildRequires:  python3-devel
@@ -54,7 +58,7 @@ applications that use %{name}.
 
 
 %prep
-%setup -n %{name}-%{version}
+%autosetup -n %{name}-%{commit0} 
 
 
 %build
@@ -86,8 +90,8 @@ make %{?_smp_mflags}
 
 %changelog
 
-* Sat Mar 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.2-2
-- Rebuilt for libbluray
+* Sat Mar 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.3-1-20170321git46c25dc
+- Updated to 0.1.3-1-20170321git46c25dc
 
 * Wed Aug 31 2016 Pavlo Rudyi <paulcarroty at riseup.net> - 0.1.2-1
 - Update to 0.1.2
