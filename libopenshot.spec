@@ -1,10 +1,10 @@
-%global gitdate 20170321
-%global commit0 46c25dc3ec5eb663f6d05dabf100c51841372eff
+%global gitdate 20170403
+%global commit0 ddae58f18c779bc4339257d87da28ff218464e1a
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .%{gitdate}git%{shortcommit0}
 
 Name:           libopenshot
-Version:        0.1.3
+Version:        0.1.4
 Release: 	1%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
@@ -89,6 +89,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Mon Apr 03 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.4-1-20170403gitddae58f
+- Updated to 0.1.4-1-20170403gitddae58f
 
 * Sat Mar 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.3-1-20170321git46c25dc
 - Updated to 0.1.3-1-20170321git46c25dc
