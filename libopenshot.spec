@@ -5,7 +5,7 @@
 
 Name:           libopenshot
 Version:        0.1.4
-Release: 	1%{?gver}%{?dist}
+Release: 	2%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -89,6 +89,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Tue Apr 18 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.4-2.20170403gitddae58f  
+- Automatic Mass Rebuild
 
 * Mon Apr 03 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.4-1-20170403gitddae58f
 - Updated to 0.1.4-1-20170403gitddae58f
