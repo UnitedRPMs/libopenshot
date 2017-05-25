@@ -5,3 +5,4 @@ SPECS/*
 SRPMS/*
 libopenshot*.tar.gz
 libopenshot*.rpm
+.directory
