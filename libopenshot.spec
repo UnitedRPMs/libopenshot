@@ -1,11 +1,11 @@
 %global gitdate 20170525
 %global commit0 b36d8540fa4be412200205d67b099eb9d7c7cc5f
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global gver .%{gitdate}git%{shortcommit0}
+%global gver .git%{shortcommit0}
 
 Name:           libopenshot
 Version:        0.1.6
-Release: 	2%{?gver}%{?dist}
+Release:        2%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
