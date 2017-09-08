@@ -1,10 +1,9 @@
-%global gitdate 20170606
-%global commit0 078c3f74dd5011436326c6019eaec60a1898f40e
+%global commit0 db740765a1c0cbbb4b7cb30ab6af082a72ff719a
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
-Version:        0.1.7
+Version:        0.1.8
 Release:        2%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
@@ -90,19 +89,22 @@ make %{?_smp_mflags}
 
 %changelog
 
+* Fri Sep 08 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.8-2.gitdb74076
+- Updated to 0.1.8-1
+
 * Tue Jun 06 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.7-2.git078c3f7
 - Updated to 0.1.7-2.git078c3f7
 
 * Thu May 25 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.6-2.gitb36d854
 - Updated to 0.1.6-2.gitb36d854
 
-* Tue Apr 18 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.4-2.20170403gitddae58f  
+* Tue Apr 18 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.4-2.gitddae58f  
 - Automatic Mass Rebuild
 
-* Mon Apr 03 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.4-1-20170403gitddae58f
+* Mon Apr 03 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.4-1-gitddae58f
 - Updated to 0.1.4-1-20170403gitddae58f
 
-* Sat Mar 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.3-1-20170321git46c25dc
+* Sat Mar 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 0.1.3-1-git46c25dc
 - Updated to 0.1.3-1-20170321git46c25dc
 
 * Wed Aug 31 2016 Pavlo Rudyi <paulcarroty at riseup.net> - 0.1.2-1
