@@ -61,7 +61,7 @@ applications that use %{name}.
 
 
 %build
-export CXXFLAGS="%{optflags} -Wl,--as-needed"
+export CXXFLAGS="%{optflags} -Wl,--as-needed -Wno-error"
 %cmake -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 .
 make %{?_smp_mflags}
 
