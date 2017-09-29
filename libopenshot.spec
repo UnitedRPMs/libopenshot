@@ -1,10 +1,10 @@
-%global commit0 db740765a1c0cbbb4b7cb30ab6af082a72ff719a
+%global commit0 d3225a80b54289529b6cec3917fde5abd647c6f8
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
 Version:        0.1.8
-Release:        2%{?gver}%{?dist}
+Release:        3%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -88,6 +88,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Thu Sep 28 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.8-3.gitd3225a8
+- Updated to current commit 
 
 * Fri Sep 08 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.8-2.gitdb74076
 - Updated to 0.1.8-1
