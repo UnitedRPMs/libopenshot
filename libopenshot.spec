@@ -26,6 +26,7 @@ BuildRequires:	alsa-lib-devel
 BuildRequires:	pulseaudio-libs-devel
 BuildRequires:	libXrandr-devel
 BuildRequires:	cppzmq-devel czmq-devel python3-zmq czmq
+BuildRequires:  zeromq-devel
 
 %description
 OpenShot Library (libopenshot) is an open-source project
