@@ -1,15 +1,16 @@
-%global commit0 67d355d215bb8e5cd17627176a4c487e43d3f34f
+%global commit0 7fc657c82b407661c464c434b44bfb871aefa68b
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
 Version:        0.1.9
-Release:        1%{?gver}%{?dist}
+Release:        7%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
 URL:            http://www.openshot.org/
 Source0:	https://github.com/OpenShot/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Patch:		ffmpeg4_fix.patch
 
 BuildRequires:  cmake swig
 BuildRequires:  python3-devel
@@ -58,7 +59,7 @@ applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}-%{commit0} 
+%autosetup -n %{name}-%{commit0} -p1
 
 
 %build
@@ -89,6 +90,10 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Mon Apr 23 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.9-7.git7fc657c
+- Updated to 0.1.9-7.git7fc657c
+- Fix for ffmpeg 4.x
 
 * Thu Nov 16 2017 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.1.9-1.git67d355d
 - Updated to 0.1.9-1.git67d355d
