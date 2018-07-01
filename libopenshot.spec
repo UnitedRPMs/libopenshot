@@ -17,7 +17,7 @@ BuildRequires:  python3-devel
 BuildRequires:  ImageMagick-c++-devel
 BuildRequires:	ImageMagick-devel
 BuildRequires:  ffmpeg-devel >= 4.0
-BuildRequires:  libopenshot-audio-devel >= 0.1.5
+BuildRequires:  libopenshot-audio-devel >= 0.1.6
 BuildRequires:  qt5-qttools-devel
 BuildRequires:  qt5-qtmultimedia-devel
 BuildRequires:  unittest-cpp-devel
