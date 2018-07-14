@@ -4,7 +4,7 @@
 
 Name:           libopenshot
 Version:        0.2.0
-Release:        7%{?gver}%{?dist}
+Release:        8%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -90,6 +90,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Fri Jul 13 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.0-8.git9972600  
+- Rebuilt for Python 3.7
 
 * Sat Jun 30 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.0-7.git9972600  
 - Updated to 0.2.0-7.git9972600
