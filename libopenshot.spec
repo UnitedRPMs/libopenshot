@@ -1,9 +1,9 @@
-%global commit0 6c4c9cc7a4a98f63be8da4116b5cf22e155e5c6c
+%global commit0 c90fb9bccef1b92082ef720ad0c3b5a8b0eea363
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
-Version:        0.2.1
+Version:        0.2.2
 Release:        7%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
@@ -90,6 +90,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Sat Sep 22 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.2-7.gitc90fb9b
+- Updated to 0.2.2-7.gitc90fb9b
 
 * Thu Sep 20 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.1-7.git6c4c9cc 
 - Updated to 0.2.1-7.git6c4c9cc
