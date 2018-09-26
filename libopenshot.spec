@@ -10,7 +10,6 @@ Summary:        Library for creating and editing videos
 License:        LGPLv3+
 URL:            http://www.openshot.org/
 Source0:	https://github.com/OpenShot/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
-Patch:		ffmpeg4_fix.patch
 
 BuildRequires:  cmake swig
 BuildRequires:  python3-devel
@@ -59,12 +58,13 @@ applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}-%{commit0} -p1
+%autosetup -n %{name}-%{commit0} 
 
 
 %build
 export CXXFLAGS="%{optflags} -Wl,--as-needed -Wno-error"
-%cmake -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 .
+%cmake -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -DFFMPEG_INCLUDE_DIR=/usr/include/ffmpeg .
+
 make %{?_smp_mflags}
 
 
