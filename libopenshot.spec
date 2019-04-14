@@ -12,6 +12,7 @@ URL:            http://www.openshot.org/
 Source0:	https://github.com/OpenShot/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:  cmake swig
+BuildRequires:	make
 BuildRequires:  python3-devel
 BuildRequires:  ImageMagick-c++-devel
 BuildRequires:	ImageMagick-devel
