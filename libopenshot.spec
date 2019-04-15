@@ -17,7 +17,7 @@ BuildRequires:  python3-devel
 BuildRequires:  ImageMagick-c++-devel
 BuildRequires:	ImageMagick-devel
 BuildRequires:  ffmpeg-devel >= 4.1
-BuildRequires:  libopenshot-audio-devel >= 2.4.4
+BuildRequires:  libopenshot-audio-devel >= 0.1.8
 BuildRequires:  qt5-qttools-devel
 BuildRequires:  qt5-qtmultimedia-devel
 BuildRequires:  unittest-cpp-devel
@@ -79,7 +79,7 @@ make %{?_smp_mflags}
 
 
 %files
-%doc AUTHORS COPYING README
+%doc AUTHORS COPYING README.md
 %{_libdir}/*.so.*
 
 %files devel
