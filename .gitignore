@@ -3,6 +3,6 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
-libopenshot*.tar.gz
-libopenshot*.rpm
+*.tar.gz
+*.rpm
 .directory

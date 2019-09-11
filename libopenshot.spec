@@ -4,12 +4,13 @@
 
 Name:           libopenshot
 Version:        0.2.3
-Release:        7%{?gver}%{?dist}
+Release:        8%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
 URL:            http://www.openshot.org/
 Source0:	https://github.com/OpenShot/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Patch:		python_fix.patch
 
 BuildRequires:  cmake swig
 BuildRequires:	make
@@ -59,7 +60,7 @@ applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}-%{commit0} 
+%autosetup -n %{name}-%{commit0} -p1
 
 
 %build
@@ -91,6 +92,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Wed Sep 11 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-8.git101f25a
+- Python3 fix for F32
 
 * Wed Apr 10 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-7.git101f25a
 - Updated to 0.2.3
