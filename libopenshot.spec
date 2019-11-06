@@ -1,16 +1,15 @@
-%global commit0 101f25a7f5a1623cca2b2514fa2f7aed93799324
+%global commit0 c2713520b996d3f52f69261527c629c6d3b1ed41
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
 Version:        0.2.3
-Release:        8%{?gver}%{?dist}
+Release:        10%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
 URL:            http://www.openshot.org/
-Source0:	https://github.com/OpenShot/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
-Patch:		python_fix.patch
+Source0:	https://github.com/OpenShot/libopenshot/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:  cmake swig
 BuildRequires:	make
@@ -60,7 +59,7 @@ applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}-%{commit0} -p1
+%autosetup -n %{name}-%{commit0} 
 
 
 %build
@@ -92,6 +91,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Wed Nov 06 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-10.gitc271352
+- Updated to current commit because our openshot use a devel version thanks to Blender 2.80
 
 * Wed Sep 11 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-8.git101f25a
 - Python3 fix for F32
