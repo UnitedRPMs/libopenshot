@@ -1,10 +1,10 @@
-%global commit0 c2713520b996d3f52f69261527c629c6d3b1ed41
+%global commit0 c04dc94cc82ce3afe5d0b35e032f63fe4b3ef9b2
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
 Version:        0.2.3
-Release:        10%{?gver}%{?dist}
+Release:        11%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -91,6 +91,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Tue Dec 03 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-11.gitc04dc94
+- Updated to current commit
 
 * Wed Nov 06 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-10.gitc271352
 - Updated to current commit because our openshot use a devel version thanks to Blender 2.80
