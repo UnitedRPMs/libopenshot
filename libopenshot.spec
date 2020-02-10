@@ -1,10 +1,30 @@
-%global commit0 c04dc94cc82ce3afe5d0b35e032f63fe4b3ef9b2
+#
+# spec file for package libopenshot
+#
+# Copyright (c) 2020 UnitedRPMs.
+#
+# All modifications and additions to the file contributed by third parties
+# remain the property of their copyright owners, unless otherwise agreed
+# upon. The license for this file, and modifications and additions to the
+# file, is the same license as for the pristine package itself (unless the
+# license for the pristine package is not an Open Source License, in which
+# case the license is the MIT License). An "Open Source License" is a
+# license that conforms to the Open Source Definition (Version 1.9)
+# published by the Open Source Initiative.
+
+# Please submit bugfixes or comments via https://goo.gl/zqFJft
+#
+
+# 
+%define _legacy_common_support 1
+
+%global commit0 63e28a07de8f4c5ad0a978bff2f47b7176a9231c
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
-Version:        0.2.3
-Release:        11%{?gver}%{?dist}
+Version:        0.2.4
+Release:        7%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -17,7 +37,7 @@ BuildRequires:  python3-devel
 BuildRequires:  ImageMagick-c++-devel
 BuildRequires:	ImageMagick-devel
 BuildRequires:  ffmpeg-devel >= 4.1
-BuildRequires:  libopenshot-audio-devel >= 0.1.8
+BuildRequires:  libopenshot-audio-devel >= 0.1.9
 BuildRequires:  qt5-qttools-devel
 BuildRequires:  qt5-qtmultimedia-devel
 BuildRequires:  unittest-cpp-devel
@@ -91,6 +111,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Mon Feb 10 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.4-7.git63e28a0
+- Updated to 0.2.4-7.git63e28a0
 
 * Tue Dec 03 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.3-11.gitc04dc94
 - Updated to current commit
