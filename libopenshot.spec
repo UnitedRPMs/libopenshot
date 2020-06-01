@@ -24,7 +24,7 @@
 
 Name:           libopenshot
 Version:        0.2.5
-Release:        7%{?gver}%{?dist}
+Release:        8%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -33,7 +33,11 @@ Source0:	https://github.com/OpenShot/libopenshot/archive/%{commit0}.tar.gz#/%{na
 
 BuildRequires:  cmake swig
 BuildRequires:	make
+%if 0%{?fedora} >= 33
+BuildRequires:  python3.9-devel
+%else
 BuildRequires:  python3-devel
+%endif
 BuildRequires:  ImageMagick-c++-devel
 BuildRequires:	ImageMagick-devel
 BuildRequires:  ffmpeg-devel >= 4.1
@@ -111,6 +115,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Sun May 31 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-8.gitd0e884df
+- Rebuilt for python3.9
 
 * Wed Mar 11 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-7.gitd0e884df
 - Updated to 0.2.5-7.gitd0e884df
