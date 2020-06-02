@@ -18,7 +18,7 @@
 # 
 %define _legacy_common_support 1
 
-%global commit0 d0e884df7805085297157fb4e9f30cd98c270a55
+%global commit0 782d764c68f5c805a79583d5140484c16ffdc9eb
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
@@ -116,7 +116,8 @@ make %{?_smp_mflags}
 
 %changelog
 
-* Sun May 31 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-8.gitd0e884df
+* Sun May 31 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-8.git782d764
+- Updated to current commit
 - Rebuilt for python3.9
 
 * Wed Mar 11 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-7.gitd0e884df
