@@ -18,13 +18,13 @@
 # 
 %define _legacy_common_support 1
 
-%global commit0 782d764c68f5c805a79583d5140484c16ffdc9eb
+%global commit0 517f2896d1e12c313f5a5f62f0945648352eb533
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:           libopenshot
 Version:        0.2.5
-Release:        8%{?gver}%{?dist}
+Release:        9%{?gver}%{?dist}
 Summary:        Library for creating and editing videos
 
 License:        LGPLv3+
@@ -40,7 +40,7 @@ BuildRequires:  python3-devel
 %endif
 BuildRequires:  ImageMagick-c++-devel
 BuildRequires:	ImageMagick-devel
-BuildRequires:  ffmpeg-devel >= 4.1
+BuildRequires:  ffmpeg-devel >= 4.3
 BuildRequires:  libopenshot-audio-devel >= 0.2.0
 BuildRequires:  qt5-qttools-devel
 BuildRequires:  qt5-qtmultimedia-devel
@@ -115,6 +115,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+
+* Tue Jun 23 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-9.git517f289
+- Rebuilt for ffmpeg
 
 * Sun May 31 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 0.2.5-8.git782d764
 - Updated to current commit
