@@ -90,11 +90,13 @@ applications that use %{name}.
 export CXXFLAGS="%{optflags} -Wl,--as-needed -Wno-error"
 %cmake -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -DFFMPEG_INCLUDE_DIR=/usr/include/ffmpeg .
 
-make %{?_smp_mflags}
+pushd %{_target_platform}
+%make_build V=0
 
 
 %install
-%make_install
+pushd %{_target_platform}
+%make_install V=0
 
 
 %post -p /sbin/ldconfig
